@@ -58,22 +58,22 @@ header h1 {
 
 .task-header h2 {
     font-size: 50px;
-    color: #111;
+    color: white;
 }
 
 /* Input Section */
 .input-section {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     width: 100%;
 }
 
 .input-section input {
     flex: 1;
     padding: 20px 14px;
-    font-size: 30px;
+    font-size: 27px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     outline: none;
     background: white;
 }
@@ -88,7 +88,7 @@ header h1 {
     background: #347a46;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
 }
@@ -196,7 +196,7 @@ header h1 {
     height: 37px;
     padding: 7px 14px;
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease,
@@ -206,25 +206,27 @@ header h1 {
 
 /* Edit button */
 .edit-btn {
-    background-color: #E2F0E7;
-    color: #153D2B;
+    background-color: #ffffff;
+    color: #307f2b;
     border: 1px solid #B7D8C2;
 }
 
 .edit-btn:hover {
-    background-color: #B7E4C7;
+    background-color: #307f2b;
+    color: white;
     transform: translateY(-1px);
 }
 
 /* Delete button */
 .delete-btn {
     background-color: #FFFFFF;
-    color: #A83232;
+    color: #b81515;
     border: 1px solid #E5BABA;
 }
 
 .delete-btn:hover {
-    background-color: #FCE8E8;
+    background-color: #b81515;
+    color: white;
     transform: translateY(-1px);
 }
 

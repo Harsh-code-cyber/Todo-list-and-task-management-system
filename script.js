@@ -17,14 +17,14 @@ function addTask(status = "in-progress") {
     taskText.appendChild(buttonContainer);
 
     const EditButton = document.createElement("button");
-    EditButton.classList.add("edit-button");
     EditButton.textContent = "Edit";
+    EditButton.classList.add("edit-btn");
     EditButton.addEventListener("click", () => {});
     buttonContainer.appendChild(EditButton);
 
     const DeleteButton = document.createElement("button");
-    DeleteButton.classList.add("delete-button");
     DeleteButton.textContent = "Delete";
+    DeleteButton.classList.add("delete-btn");
     DeleteButton.addEventListener("click", () => {});
     buttonContainer.appendChild(DeleteButton);
 
