@@ -1,0 +1,110 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    height: 160px;
+
+    background: linear-gradient(
+        rgba(0, 25, 10, 0.7),
+        rgba(0, 25, 10, 0.7)
+    ), url("https://images.unsplash.com/photo-1448375240586-882707db888b")
+    center/cover;
+
+    border: 5px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 75px;
+    font-weight: 600;
+}
+
+/* Main Container */
+.container {
+    max-width: 860px;
+    margin: 110px auto;
+    padding: 15px;
+}
+
+/* Task Heading */
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.task-header h2 {
+    font-size: 28px;
+    color: #111;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background: white;
+}
+
+.input-section input:focus {
+    border-color: #295638;
+}
+
+/* Add Button */
+.input-section button {
+    padding: 0 30px;
+    background: #347a46;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.input-section button:hover {
+    background: #245c34;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        height: 120px;
+    }
+
+    header h1 {
+        font-size: 45px;
+    }
+
+    .container {
+        margin: 60px auto;
+    }
+
+    .input-section button {
+        padding: 0 20px;
+    }
+}
