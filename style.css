@@ -234,3 +234,53 @@ header h1 {
     outline: 2px solid #2D6A4F;
     outline-offset: 3px;
 }
+
+
+
+/* editable div css containing css of save and cancel btn */
+
+/* Editable task description */
+.taskText[contenteditable="true"] {
+    outline: 2px solid #B7E4C7;
+    background-color: #F4FBF6;
+    border-radius: 6px;
+    padding: 8px;
+    min-height: 24px;
+    cursor: text;
+}
+
+/* Status dropdown */
+.status-select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #B7D8C2;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #153D2B;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    outline-color: #2D6A4F;
+}
+
+/* Save button */
+.save-btn {
+    background-color: #1B4332;
+    color: #FFFFFF;
+    border: 1px solid #1B4332;
+}
+
+.save-btn:hover {
+    background-color: #2D6A4F;
+}
+
+/* Cancel button */
+.cancel-btn {
+    background-color: #FFFFFF;
+    color: #153D2B;
+    border: 1px solid #B7D8C2;
+}
+
+.cancel-btn:hover {
+    background-color: #E2F0E7;
+}
