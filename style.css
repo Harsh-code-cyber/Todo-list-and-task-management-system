@@ -9,6 +9,13 @@
 body {
     background: #f4f4f4;
     min-height: 100vh;
+    background: radial-gradient(
+        circle at center,
+        #173c2b 0%,
+        #143525 35%,
+        #0B2418 70%,
+        #06140D 100%
+    );
 }
 
 /* Header */
@@ -50,7 +57,7 @@ header h1 {
 }
 
 .task-header h2 {
-    font-size: 28px;
+    font-size: 50px;
     color: #111;
 }
 
@@ -63,8 +70,8 @@ header h1 {
 
 .input-section input {
     flex: 1;
-    padding: 15px;
-    font-size: 16px;
+    padding: 20px 14px;
+    font-size: 30px;
     border: 1px solid #ddd;
     border-radius: 5px;
     outline: none;
@@ -107,4 +114,121 @@ header h1 {
     .input-section button {
         padding: 0 20px;
     }
+}
+
+/*task Cards */
+
+/* Main task card */
+.task-card {
+    margin: 10px 0;
+    background: #FFFFFF;
+    color: #153D2B;
+    border: 1px solid #DCE8DF;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Top section: task description */
+.task-description {
+    width: 100%;
+    height: fit-content;
+    padding: 18px 20px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    color:#347a46;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Bottom section: task progress */
+.task-status {
+    padding: 10px 20px;
+    border-top: 1px solid #DCE8DF;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* In-progress: light green */
+.status-in-progress {
+    background-color: #B7E4C7;
+    color: #153D2B;
+}
+
+/* Partial-done: bright yellow */
+.status-partial-done {
+    background-color: #FFE566;
+    color: #493A00;
+}
+
+/* Completed: dark green */
+.status-completed {
+    background-color: #1B4332;
+    color: #FFFFFF;
+}
+
+/* edit, delete btn css */
+
+/* Container for Edit and Delete buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    gap: 8px;
+    padding: 2px 20px 2px;
+}
+
+/* Common button styling */
+.button-container button {
+    width: 90px;
+    height: 37px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Edit button */
+.edit-btn {
+    background-color: #E2F0E7;
+    color: #153D2B;
+    border: 1px solid #B7D8C2;
+}
+
+.edit-btn:hover {
+    background-color: #B7E4C7;
+    transform: translateY(-1px);
+}
+
+/* Delete button */
+.delete-btn {
+    background-color: #FFFFFF;
+    color: #A83232;
+    border: 1px solid #E5BABA;
+}
+
+.delete-btn:hover {
+    background-color: #FCE8E8;
+    transform: translateY(-1px);
+}
+
+.button-container button:focus-visible {
+    outline: 2px solid #2D6A4F;
+    outline-offset: 3px;
 }
