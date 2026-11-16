@@ -9,6 +9,10 @@
 body {
     background: #f4f4f4;
     min-height: 100vh;
+    background: radial-gradient(
+        circle at center,
+         #2f6c50 0%, #1e4c35 35%, #103724 70%, #091f14 100% 
+    );
 }
 
 /* Header */
@@ -37,7 +41,7 @@ header h1 {
 /* Main Container */
 .container {
     max-width: 860px;
-    margin: 110px auto;
+    margin: 50px auto;
     padding: 15px;
 }
 
@@ -46,27 +50,27 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .task-header h2 {
-    font-size: 28px;
-    color: #111;
+    font-size: 50px;
+    color: white;
 }
 
 /* Input Section */
 .input-section {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     width: 100%;
 }
 
 .input-section input {
     flex: 1;
-    padding: 15px;
-    font-size: 16px;
+    padding: 15px 6px;
+    font-size: 22px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     outline: none;
     background: white;
 }
@@ -81,7 +85,7 @@ header h1 {
     background: #347a46;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
 }
@@ -107,4 +111,173 @@ header h1 {
     .input-section button {
         padding: 0 20px;
     }
+}
+
+/*task Cards */
+
+/* Main task card */
+.task-card {
+    margin: 10px 0;
+    background: #FFFFFF;
+    color: #153D2B;
+    border: 1px solid #DCE8DF;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Top section: task description */
+.task-description {
+    width: 100%;
+    height: fit-content;
+    padding: 18px 20px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    color:#347a46;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Bottom section: task progress */
+.task-status {
+    padding: 10px 20px;
+    border-top: 1px solid #DCE8DF;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* In-progress: light green */
+.status-in-progress {
+    background-color: #B7E4C7;
+    color: #153D2B;
+}
+
+/* Partial-done: bright yellow */
+.status-partial-done {
+    background-color: #FFE566;
+    color: #493A00;
+}
+
+/* Completed: dark green */
+.status-completed {
+    background-color: #08923f;
+    color: #FFFFFF;
+}
+
+/* edit, delete btn css */
+
+/* Container for Edit and Delete buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    gap: 8px;
+    padding: 2px 20px 2px;
+}
+
+/* Common button styling */
+.button-container button {
+    width: 90px;
+    height: 37px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Edit button */
+.edit-btn {
+    background-color: #ffffff;
+    color: #307f2b;
+    border: 1px solid #B7D8C2;
+}
+
+.edit-btn:hover {
+    background-color: #307f2b;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Delete button */
+.delete-btn {
+    background-color: #FFFFFF;
+    color: #b81515;
+    border: 1px solid #E5BABA;
+}
+
+.delete-btn:hover {
+    background-color: #b81515;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.button-container button:focus-visible {
+    outline: 2px solid #2D6A4F;
+    outline-offset: 3px;
+}
+
+
+
+/* editable div css containing css of save and cancel btn */
+
+/* Editable task description */
+.taskText[contenteditable="true"] {
+    outline: 2px solid #B7E4C7;
+    background-color: #F4FBF6;
+    border-radius: 6px;
+    padding: 8px;
+    min-height: 24px;
+    cursor: text;
+}
+
+/* Status dropdown */
+.status-select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #B7D8C2;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #153D2B;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    outline-color: #2D6A4F;
+}
+
+/* Save button */
+.save-btn {
+    background-color: #1B4332;
+    color: #FFFFFF;
+    border: 1px solid #1B4332;
+}
+
+.save-btn:hover {
+    background-color: #2D6A4F;
+}
+
+/* Cancel button */
+.cancel-btn {
+    background-color: #FFFFFF;
+    color: #153D2B;
+    border: 1px solid #B7D8C2;
+}
+
+.cancel-btn:hover {
+    background-color: #E2F0E7;
 }
